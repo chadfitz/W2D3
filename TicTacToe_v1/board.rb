@@ -60,7 +60,7 @@ class Board
     end
 
     def win?(mark)
-        win_row?(mark) || win_col?(mark) || win_diagonal(mark)
+        win_row?(mark) || win_col?(mark) || win_diagonal?(mark)
     end
 
     def empty_positions?

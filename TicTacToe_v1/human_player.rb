@@ -8,7 +8,12 @@ class HumanPlayer
     def get_position
         puts 'enter a position with coordinates separated with a space like `4 7`'
         position = gets.chomp.split.map(&:to_i)
-        raise "sorry, that is an invalid input" if position.length != 2 || position.any? { |num| num > 2 || num < 0 }
+        # raise "sorry, that is an invalid input" if position.length != 2 || position.any? { |num| num > 2 || num < 0 }
+        while position.length != 2 || position.any? { |num| num > 2 || num < 0 }
+            puts "sorry, invalid input"
+            puts 'enter a position with coordinates separated with a space like `4 7`'
+            position = gets.chomp.split.map(&:to_i)
+        end
         position
     end
 end
