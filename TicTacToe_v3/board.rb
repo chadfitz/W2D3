@@ -67,4 +67,10 @@ class Board
     def empty_positions?
         (0...@grid.length).any? { |i| self[[i,i]] == "_"}
     end
+
+    def legal_positions
+        (0...grid.length).map do |row|
+            (0...grid[0].length).map do |col|
+                
+    end
 end
